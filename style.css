@@ -40,7 +40,7 @@ body {
   padding: 20px;
   color: var(--Light-grayish-blue);
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex-direction: column;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
