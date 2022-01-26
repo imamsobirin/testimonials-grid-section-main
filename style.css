@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+/* 500, 600 */
+
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(216, 19%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --card-4: hsl(217, 30%, 14%);
+
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  font-size: 13px;
+  width: 100%;
+}
+
+.container {
+  width: 85%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+    "card-1 card-1 card-2 card-3"
+    "card-4 card-5 card-5 card-3";
+}
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--Light-grayish-blue);
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.card-1 {
+  position: relative;
+  grid-area: card-1;
+  background-color: var(--Moderate-violet);
+}
+.quotation__icon {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  z-index: 0;
+}
+.card-2 {
+  grid-area: card-2`;
+  background-color: var(--Very-dark-grayish-blue);
+}
+.card-3 {
+  grid-area: card-3;
+  background-color: white;
+  color: var(--card-4);
+}
+.card-4 {
+  grid-area: card-4;
+  background-color: white;
+  color: var(--card-4);
+}
+.card-5 {
+  grid-area: card-5;
+  background-color: var(--card-4);
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile__ava img {
+  border-radius: 50%;
+  margin-right: 20px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+}
+.profile__name {
+  line-height: 1.6;
+}
+.profile__name span {
+  opacity: 0.5;
+}
+.testimoni {
+  font-size: 1.2rem;
+  font-weight: 600;
+  z-index: 2;
+}
+.quote {
+  opacity: 0.7;
+  line-height: 1.5;
+}
+@media (max-width: 800px) {
+  .container {
+    margin: 20px auto;
+    width: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "card-1"
+      "card-2"
+      "card-4"
+      "card-5"
+      "card-3";
+  }
+}
