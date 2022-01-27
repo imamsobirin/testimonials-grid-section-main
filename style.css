@@ -22,15 +22,16 @@
 body {
   font-size: 13px;
   width: 100%;
+  background: var(--Light-grayish-blue);
 }
 
 .container {
   width: 85%;
-  margin: 20px auto;
+  margin: 5rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-areas:
     "card-1 card-1 card-2 card-3"
     "card-4 card-5 card-5 card-3";
